@@ -6,7 +6,8 @@
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(#5bc2e7aa, #6980c5aa), url('hero.jpg');
+  background-image: linear-gradient(to bottom right, #5bc2e7aa, #6980c5aa),
+    url('hero.jpg');
   background-size: cover;
   background-repeat: no-repeat;
 }
