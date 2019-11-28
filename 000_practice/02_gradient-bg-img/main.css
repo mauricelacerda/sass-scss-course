@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(#5bc2e7aa, #6980c5aa), url('hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
