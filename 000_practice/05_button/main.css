@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato';
+}
+
+.header {
+  /* height: 100vh; */
+  background-image: linear-gradient(to bottom right, #5bc2e7aa, #6980c5aa),
+    url('hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+
+.heading-primary {
+  /* border: 2px solid hotpink; */
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.heading-primary-main,
+.heading-primary-sub {
+  display: block;
+  text-align: center;
+}
+
+.heading-primary-main {
+  /* border: 2px solid crimson; */
+  letter-spacing: 30px;
+  font-size: 80px;
+  font-weight: 400;
+}
+
+.heading-primary-sub {
+  /* border: 2px solid greenyellow; */
+  letter-spacing: 18px;
+  font-size: 25px;
+}
+
+.btn {
+  text-decoration: none;
+  color: #fff;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5bc2e7;
+  border-radius: 2rem;
+  padding: 0.6rem 2rem;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.btn:hover {
+  transform: translateX(-50%) translateY(-0.3rem);
+  box-shadow: 0 10px 20px #00000033;
+}
+.btn:active {
+  transform: translateX(-50%) translateY(-0.1rem);
+  box-shadow: 0 5px 10px #00000033;
+}
