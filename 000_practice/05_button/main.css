@@ -47,6 +47,7 @@ body {
 }
 
 .btn {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
   position: absolute;
@@ -54,11 +55,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background-color: #5bc2e7;
-  border-radius: 2rem;
+  border-radius: 5rem;
   padding: 0.6rem 2rem;
   transition-property: all;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+  animation-name: moveInBottom;
+  animation-duration: 400ms;
+  animation-timing-function: ease-out;
+  animation-delay: 750ms;
+  animation-fill-mode: backwards;
 }
 
 .btn:hover {
@@ -68,4 +74,38 @@ body {
 .btn:active {
   transform: translateX(-50%) translateY(-0.1rem);
   box-shadow: 0 5px 10px #00000033;
+}
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  background-color: #5bc2e7;
+  height: 100%;
+  width: 100%;
+  border-radius: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.6) scaleY(1.4);
+  opacity: 0;
+}
+
+@keyframes moveInBottom {
+  0% {
+    transform: translateX(-50%) translateY(150px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
