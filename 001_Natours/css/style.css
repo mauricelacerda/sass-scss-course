@@ -9,8 +9,12 @@ Dark-green: #28b485
 
 /* Resets */
 
-* {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
+  /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */
   margin: 0;
   padding: 0;
 }
@@ -26,6 +30,9 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 3rem;
+  /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
+  box-sizing: border-box;
+  /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */
 }
 
 /* Above the Fold */
