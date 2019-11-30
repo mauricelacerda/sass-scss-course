@@ -150,6 +150,7 @@ body {
   display: inline-block;
   border-radius: 5rem;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn-white {
