@@ -1,0 +1,32 @@
+$color-primary: #b2a822;
+$color-white: #fefefe;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+}
+
+.list-menu {
+  background-color: $color-primary;
+  display: flex;
+  list-style: none;
+
+  &__list-item {
+    padding: 0.5rem 1rem;
+    color: $color-white;
+
+    &:last-child {
+      font-weight: bold;
+      color: darken($color: dodgerblue, $amount: 10%);
+      background-color: lighten(hotpink, 20%);
+      text-transform: uppercase;
+    }
+  }
+}

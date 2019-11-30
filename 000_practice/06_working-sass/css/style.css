@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 14px; }
+
+.list-menu {
+  background-color: #b2a822;
+  display: flex;
+  list-style: none; }
+  .list-menu__list-item {
+    padding: 0.5rem 1rem;
+    color: #fefefe; }
+    .list-menu__list-item:last-child {
+      font-weight: bold;
+      color: #0077ea;
+      background-color: #ffcfe7;
+      text-transform: uppercase; }
