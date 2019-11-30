@@ -1,4 +1,13 @@
-@charset "UTF-8";
+// Colors:
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-gray-dark: #777;
+$color-white: #fff;
+
+// Resets:
+
 *,
 *::before,
 *::after {
@@ -6,120 +15,159 @@
   /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
   /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   /* font-size: 16px; */
   line-height: 1.7;
-  color: #777;
+  color: $color-gray-dark;
   padding: 3rem;
   /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
   box-sizing: border-box;
-  /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */ }
+  /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */
+}
 
 /* Above the Fold */
+
 .header {
   height: 95vh;
   /* Define the 'linear-gradient' before the image url to make it appear on top */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img/hero.jpg');
   background-size: cover;
   background-position: top 0 center;
   position: relative;
+
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* 'clip-path' allow us to define shapes where the element will be visible */
   /* For inspiration and to explore possibilities,
       check Clippy — CSS clip-path maker
-      at https://bennettfeely.com/clippy/ */ }
+      at https://bennettfeely.com/clippy/ */
+}
 
 .header__logo-box {
   position: absolute;
   top: 4rem;
-  left: 4rem; }
+  left: 4rem;
+}
 
 .header__logo {
-  height: 3.5rem; }
+  height: 3.5rem;
+}
 
 .header__text-box {
   text-align: center;
   position: absolute;
+
   /* This will center the <div>: */
   top: 40%;
   /* in relation to the PARENT element */
   left: 50%;
   /* in relation to the PARENT element */
   transform: translate(-50%, -50%);
-  /* in relation to the element ITSELF */ }
+  /* in relation to the element ITSELF */
+}
 
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+}
 
 .heading-primary--main,
 .heading-primary--sub {
   display: block;
   animation-duration: 1000ms;
-  animation-timing-function: ease-in-out; }
+  animation-timing-function: ease-in-out;
+}
 
 .heading-primary--main {
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-  animation-name: moveInLeft; }
+  animation-name: moveInLeft;
+}
 
 .heading-primary--sub {
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
-  animation-name: moveInRight; }
+  animation-name: moveInRight;
+}
 
 /* Animations */
+
 @keyframes moveInLeft {
   0% {
     color: #ffffff00;
-    transform: translateX(-10rem); }
+    transform: translateX(-10rem);
+  }
+
   80% {
-    transform: translateX(1rem); }
+    transform: translateX(1rem);
+  }
+
   100% {
-    color: #fff;
-    transform: translateX(0); } }
+    color: $color-white;
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     color: #ffffff00;
-    transform: translateX(10rem); }
+    transform: translateX(10rem);
+  }
+
   80% {
-    transform: translateX(-1rem); }
+    transform: translateX(-1rem);
+  }
+
   100% {
-    color: #fff;
-    transform: translateX(0); } }
+    color: $color-white;
+    transform: translateX(0);
+  }
+}
 
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(10rem); }
+    transform: translateY(10rem);
+  }
+
   100% {
     opacity: 1;
-    transform: translateY(0); } }
+    transform: translateY(0);
+  }
+}
 
 /* Call to Action Button */
+
 .btn {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
   border-radius: 5rem;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+}
 
 .btn--white {
   margin-top: 2.5rem;
-  background-color: #fff;
-  padding: 1rem 2.5rem; }
+  background-color: $color-white;
+  padding: 1rem 2.5rem;
+}
 
 .btn--animated {
   animation-name: moveInBottom;
@@ -127,42 +175,52 @@ body {
   animation-timing-function: ease-out;
   animation-delay: 750ms;
   animation-fill-mode: forwards;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+}
 
 .btn:link,
 .btn:visited {
-  color: #777;
+  color: $color-gray-dark;
   transition-property: all;
-  transition-duration: 100ms; }
+  transition-duration: 100ms;
+}
 
 .btn:hover {
   transform: translateY(-0.2rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
 
 .btn:active {
   transform: translateY(0);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
 
 /* Blow Up Effect */
+
 .btn::after {
   content: '';
   display: inline-block;
   height: 100%;
   width: 100%;
   border-radius: 5rem;
+
   /* Place the '::after' pseudo-element behind the original element */
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+
   /* The initial state of the ':hover::after' is the '::after' */
   /* This is why the 'transition' properties should be applied here */
   transition-property: all;
-  transition-duration: 200ms; }
+  transition-duration: 200ms;
+}
 
 .btn--white::after {
-  background-color: #fff; }
+  background-color: $color-white;
+}
 
 .btn:hover::after {
   transform: scaleX(1.6) scaleY(1.3);
-  opacity: 0; }
+  opacity: 0;
+}
