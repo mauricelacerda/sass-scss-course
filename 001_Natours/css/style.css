@@ -35,53 +35,46 @@ body {
   /* For inspiration and to explore possibilities,
       check Clippy — CSS clip-path maker
       at https://bennettfeely.com/clippy/ */ }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__text-box {
-  text-align: center;
-  position: absolute;
-  /* This will center the <div>: */
-  top: 40%;
-  /* in relation to the PARENT element */
-  left: 50%;
-  /* in relation to the PARENT element */
-  transform: translate(-50%, -50%);
-  /* in relation to the element ITSELF */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    text-align: center;
+    position: absolute;
+    /* This will center the <div>: */
+    top: 40%;
+    /* in relation to the PARENT element */
+    left: 50%;
+    /* in relation to the PARENT element */
+    transform: translate(-50%, -50%);
+    /* in relation to the element ITSELF */ }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden; }
-
-.heading-primary--main,
-.heading-primary--sub {
-  display: block;
-  animation-duration: 1000ms;
-  animation-timing-function: ease-in-out; }
-
-.heading-primary--main {
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft; }
-
-.heading-primary--sub {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation-name: moveInRight; }
+  .heading-primary--main, .heading-primary--sub {
+    display: block;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out; }
+  .heading-primary--main {
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft; }
+  .heading-primary--sub {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation-name: moveInRight; }
 
 /* Animations */
 @keyframes moveInLeft {
   0% {
-    color: #ffffff00;
+    color: transparent;
     transform: translateX(-10rem); }
   80% {
     transform: translateX(1rem); }
@@ -91,7 +84,7 @@ body {
 
 @keyframes moveInRight {
   0% {
-    color: #ffffff00;
+    color: transparent;
     transform: translateX(10rem); }
   80% {
     transform: translateX(-1rem); }
@@ -114,55 +107,46 @@ body {
   display: inline-block;
   border-radius: 5rem;
   position: relative;
-  font-size: 1.6rem; }
-
-.btn--white {
-  margin-top: 2.5rem;
-  background-color: #fff;
-  padding: 1rem 2.5rem; }
-
-.btn--animated {
-  animation-name: moveInBottom;
-  animation-duration: 300ms;
-  animation-timing-function: ease-out;
-  animation-delay: 750ms;
-  animation-fill-mode: forwards;
-  animation-fill-mode: backwards; }
-
-.btn:link,
-.btn:visited {
-  color: #777;
-  transition-property: all;
-  transition-duration: 100ms; }
-
-.btn:hover {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn:active {
-  transform: translateY(0);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-/* Blow Up Effect */
-.btn::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 5rem;
-  /* Place the '::after' pseudo-element behind the original element */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  /* The initial state of the ':hover::after' is the '::after' */
-  /* This is why the 'transition' properties should be applied here */
-  transition-property: all;
-  transition-duration: 200ms; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.6) scaleY(1.3);
-  opacity: 0; }
+  font-size: 1.6rem;
+  /* Blow Up Effect */ }
+  .btn--white {
+    margin-top: 2.5rem;
+    background-color: #fff;
+    padding: 1rem 2.5rem; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn:link, .btn:visited {
+    color: #777;
+    transition-property: all;
+    transition-duration: 100ms; }
+  .btn:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba(27, 26, 26, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.6) scaleY(1.3);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba(27, 26, 26, 0.2); }
+  .btn::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    /* Place the '::after' pseudo-element behind the original element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* The initial state of the ':hover::after' is the '::after' */
+    /* This is why the 'transition' properties should be applied here */
+    transition-property: all;
+    transition-duration: 200ms; }
+  .btn--animated {
+    animation-name: moveInBottom;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    animation-delay: 750ms;
+    animation-fill-mode: forwards;
+    animation-fill-mode: backwards; }
