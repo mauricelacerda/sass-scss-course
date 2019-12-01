@@ -6,6 +6,42 @@ $color-text-light: #eee;
 
 $button-width: 150px;
 
+@mixin clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin style-link-text($color) {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color;
+}
+
+/*
+  A mixin stores a piece of code that cad be used in other rule sets with the @include
+*/
+
+@function divide($a, $b) {
+  @return $a / $b;
+}
+
+%btn-placeholder {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  width: $button-width;
+
+  @include style-link-text($color-text-light);
+}
+
+/*
+  A %placeholder creates a rule-set with the code inside of it. It can be called with an @extend rule.
+*/
+
 *,
 *::before,
 *::after {
@@ -19,14 +55,10 @@ body {
 }
 
 nav {
-  margin: 30px;
+  margin: divide(60, 2) * 1px;
   background-color: $color-primary;
 
-  &::after {
-    content: '';
-    clear: both;
-    display: table;
-  }
+  @include clearfix();
 }
 
 .navigation {
@@ -43,9 +75,7 @@ nav {
 
     a:link,
     a:visited {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: $color-text-dark;
+      @include style-link-text($color-text-dark);
     }
   }
 }
@@ -54,22 +84,9 @@ nav {
   float: right;
 }
 
-.btn-main:link,
-.btn-main:visited,
-.btn-hot:link,
-.btn-hot:visited {
-  padding: 10px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50px;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: $button-width;
-  color: $color-text-light;
-}
-
 .btn-main {
   &:link {
+    @extend %btn-placeholder;
     background-color: $color-secondary;
   }
   &:hover {
@@ -78,6 +95,7 @@ nav {
 }
 .btn-hot {
   &:link {
+    @extend %btn-placeholder;
     background-color: $color-tertiary;
   }
   &:hover {
