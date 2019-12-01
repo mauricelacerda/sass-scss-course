@@ -1,0 +1,72 @@
+/* Call to Action Button */
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5rem;
+  position: relative;
+  font-size: 1.6rem;
+
+  &--white {
+    margin-top: 2.5rem;
+    background-color: $color-white;
+    padding: 1rem 2.5rem;
+
+    &::after {
+      background-color: $color-white;
+    }
+  }
+
+  &:link,
+  &:visited {
+    color: $color-gray-dark;
+    transition-property: all;
+    transition-duration: 100ms;
+  }
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.6) scaleY(1.3);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  /* Blow Up Effect */
+
+  &::after {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+
+    /* Place the '::after' pseudo-element behind the original element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    /* The initial state of the ':hover::after' is the '::after' */
+    /* This is why the 'transition' properties should be applied here */
+    transition-property: all;
+    transition-duration: 200ms;
+  }
+
+  &--animated {
+    animation-name: moveInBottom;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    animation-delay: 750ms;
+    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
+  }
+}

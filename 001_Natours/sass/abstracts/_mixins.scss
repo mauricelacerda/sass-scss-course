@@ -1,0 +1,11 @@
+// Mixins:
+
+@mixin formatMainHeading($font-size,
+  $font-weight,
+  $letter-spacing,
+  $animation-name) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  animation-name: $animation-name;
+}
