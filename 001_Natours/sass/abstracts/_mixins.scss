@@ -9,3 +9,30 @@
   letter-spacing: $letter-spacing;
   animation-name: $animation-name;
 }
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin calcColumnWidth ($guttersInRow, $numOfColumns, $colSpan) {
+  // Calculate the sum of the width of all gutters in the grid row
+  // A 4-col grid row has 3 gutters, etc...
+  $totalGutterWidth: #{$guttersInRow} * #{$gutter-horizontal};
+
+  // What is the width of the base column in that row?
+  $baseGridColumn: calc((100% - #{$totalGutterWidth}) / #{$numOfColumns});
+
+  // Does this column span through more than one grid column?
+  // If so, how many gutters the span go through?
+  $hiddenGutters: calc(#{$colSpan} - 1);
+
+  // Considering all of the above, calculate the width of the column
+  $fullColumnWidth: calc((#{$colSpan} * #{$baseGridColumn}) + (#{$hiddenGutters} * #{$gutter-horizontal}));
+
+  // Outputs the calculated width
+  width: $fullColumnWidth;
+}
