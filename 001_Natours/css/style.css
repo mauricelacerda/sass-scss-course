@@ -161,6 +161,26 @@ body {
     animation-fill-mode: forwards;
     animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: .3rem 1rem;
+  transition-property: all;
+  transition-duration: 200ms; }
+
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 1rem rgba(27, 26, 26, 0.2);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.3rem 0.5rem rgba(27, 26, 26, 0.2);
+  transform: translateY(0); }
+
 .row {
   max-width: 114rem;
   margin-left: auto;
