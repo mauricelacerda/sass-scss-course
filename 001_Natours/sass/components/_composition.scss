@@ -1,0 +1,47 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .4);
+    border-radius: .3rem;
+    position: absolute;
+    z-index: 1;
+    transition-property: all;
+    transition-duration: 200ms;
+    outline-offset: 2rem;
+
+    &--p1 {
+      top: 0;
+      left: 0;
+    }
+
+    &--p2 {
+      top: 3rem;
+      right: 0;
+    }
+
+    &--p3 {
+      top: 10rem;
+      left: 20%;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color: $color-black, $alpha: .6);
+      z-index: 2;
+      outline: 1.5rem solid $color-primary;
+    }
+  }
+
+  // As soon as you hover one photo in the composition, the other photos should shrink
+
+  // So when we hover the whole composition:
+  //    '.composition:hover'
+  // Select the photos which are not hovered:
+  //    '.composition__photo:not(:hover)'
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(.95);
+  }
+}
