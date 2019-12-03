@@ -27,10 +27,43 @@ body {
   }
 
   &--sub {
-    @include formatMainHeading(2rem, 700, 1.75rem, moveInRight);
+    @include formatMainHeading(2rem, 700, 1.7rem, moveInRight);
     // font-size: 2rem;
     // font-weight: 700;
     // letter-spacing: 1.75rem;
     // animation-name: moveInRight;
+    margin-left: -1.5rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: $color-transparent;
+  transition-property: all;
+  transition-duration: 200ms;
+
+  &:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: $margin-medium;
   }
 }

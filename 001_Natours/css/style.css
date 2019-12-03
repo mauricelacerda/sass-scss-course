@@ -69,8 +69,46 @@ body {
   .heading-primary--sub {
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 1.75rem;
-    animation-name: moveInRight; }
+    letter-spacing: 1.7rem;
+    animation-name: moveInRight;
+    margin-left: -1.5rem; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition-property: all;
+  transition-duration: 200ms; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(27, 26, 26, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.uc__text-align--center {
+  text-align: center; }
+
+.uc__margin-bottom--small {
+  margin-bottom: 1.5rem; }
+
+.uc__margin-bottom--medium {
+  margin-bottom: 3rem; }
+
+.uc__margin-bottom--large {
+  margin-bottom: 8rem; }
 
 /* Call to Action Button */
 .btn {
@@ -125,7 +163,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin-left: auto;
   margin-right: auto; }
   .row:not(:last-child) {
@@ -135,7 +172,6 @@ body {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    background-color: tomato;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -181,3 +217,8 @@ body {
     /* in relation to the PARENT element */
     transform: translate(-50%, -50%);
     /* in relation to the element ITSELF */ }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25vh; }
