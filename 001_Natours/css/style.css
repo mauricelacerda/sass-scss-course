@@ -209,6 +209,27 @@ body {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
 
+.feature-box {
+  padding: 2.5rem;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: .4rem;
+  box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15);
+  text-align: center;
+  transition-property: all;
+  transition-duration: 200ms; }
+  .feature-box:hover {
+    transform: translateY(-2rem) scale(1.03); }
+  .feature-box .fas {
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 6rem;
+    color: transparent;
+    margin: 1.5rem; }
+  .feature-box .heading-tertiary {
+    text-align: center; }
+
 .row {
   max-width: 114rem;
   margin-left: auto;
@@ -270,3 +291,12 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -25vh; }
+
+.section-features {
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/001_Natours/img/nat-4.jpg");
+  background-size: cover;
+  padding: 20rem;
+  transform: skewY(-7deg);
+  margin-top: -15rem; }
+  .section-features > * {
+    transform: skewY(7deg); }

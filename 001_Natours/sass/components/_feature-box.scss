@@ -1,0 +1,29 @@
+.feature-box {
+
+  padding: 2.5rem;
+  height: fit-content;
+  background-color: rgba($color: $color-white, $alpha: .6);
+  border-radius: .4rem;
+  box-shadow: 0 1.5rem 4rem 0 rgba($color: $color-black, $alpha: .15);
+  text-align: center;
+  transition-property: all;
+  transition-duration: 200ms;
+
+  &:hover {
+    transform: translateY(-2rem) scale(1.03);
+  }
+
+  .fas {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 6rem;
+    color: $color-transparent;
+    margin: $margin-small;
+  }
+
+  .heading-tertiary {
+    text-align: center;
+  }
+
+}
