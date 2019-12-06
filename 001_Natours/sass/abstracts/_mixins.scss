@@ -40,3 +40,8 @@
 @mixin box-shadow--smooth {
   box-shadow: 0 1.5rem 4rem 0 rgba($color: $color-black, $alpha: .15);
 }
+
+@mixin center-block {
+  margin-left: auto;
+  margin-right: auto;
+}
