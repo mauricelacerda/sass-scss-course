@@ -12,15 +12,23 @@
     margin-top: 2.5rem;
     background-color: $color-white;
     padding: 1rem 2.5rem;
+    color: $color-gray-dark;
 
     &::after {
       background-color: $color-white;
     }
   }
 
+  &--green {
+    // margin-top: 2.5rem;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 1rem 2.5rem;
+  }
+
   &:link,
   &:visited {
-    color: $color-gray-dark;
+    // color: $color-gray-dark;
     transition-property: all;
     transition-duration: 100ms;
   }

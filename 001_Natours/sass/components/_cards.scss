@@ -57,6 +57,8 @@
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
 
     &--1 {
       background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('/001_Natours/img/nat-5.jpg');
@@ -132,7 +134,7 @@
   &__price {
     color: $color-white;
     font-size: 8rem;
-    font-weight: 300;
+    font-weight: 100;
 
     &::before {
       content: 'Only';
