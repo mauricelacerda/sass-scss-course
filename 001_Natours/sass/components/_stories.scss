@@ -1,10 +1,72 @@
 .story {
   width: 75%;
-  background-color: $color-white;
-  border-radius: .3rem;
-  // margin-left: auto;
-  // margin-right: auto;
   @include center-block;
   @include box-shadow--smooth;
-  padding: 6rem;
+  background-color: rgba($color: $color-white, $alpha: .6);
+  border-radius: .3rem;
+  padding: 6rem 9rem;
+  font-size: $default-font-size;
+  transform: skewX(-12deg);
+  z-index: 1;
+
+  &:not(:last-child) {
+    margin-bottom: $margin-large;
+  }
+
+  &__avatar {
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    float: left;
+
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    overflow: hidden;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    backface-visibility: hidden;
+
+    transform: translateX(-4rem) skewX(12deg);
+
+  }
+
+  &__text {
+    transform: skewX(12deg);
+  }
+
+  &__img {
+    height: 100%;
+    transition-property: all;
+    transition-duration: 500ms;
+    transform: translate(-15%) scale(1.2);
+    backface-visibility: hidden;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    color: $color-white;
+    text-transform: uppercase;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 500ms;
+
+  }
+
+  &:hover &__caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  &:hover &__img {
+    -webkit-filter: blur(.3rem) brightness(80%);
+    filter: blur(.3rem) brightness(80%);
+    transform: translate(-15%) scale(1);
+  }
+
+
 }
