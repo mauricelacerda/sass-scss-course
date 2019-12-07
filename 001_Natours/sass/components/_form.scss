@@ -1,0 +1,17 @@
+.form {
+
+  &__group {
+    border: none;
+  }
+
+  &__input {
+    font-size: $default-font-size;
+    font-family: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: .3rem;
+    background-color: rgba($color: $color-white, $alpha: .5);
+    border: none;
+  }
+
+  &__label {}
+}

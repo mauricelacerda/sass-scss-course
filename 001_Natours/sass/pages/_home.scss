@@ -26,3 +26,22 @@
   padding: 15rem 0;
   position: relative;
 }
+
+.section-book {
+  background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+  padding: 10rem 0;
+}
+
+.book {
+  background-image: linear-gradient(105deg, rgba($color-white, .8) 50%, $color-transparent 50%), url('/001_Natours/img/nat-10.jpg');
+  background-size: cover;
+  height: 50rem;
+  border-radius: .3rem;
+  @include box-shadow--smooth;
+  background-position: 0 50%;
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
+}
