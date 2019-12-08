@@ -295,15 +295,26 @@
               </fieldset>
 
               <fieldset class="form__group">
-                <input type="radio" id="group-size--small" name="groupSize" value="small">
-                <label for="group-size--small">Small tour
-                  group</label>
-                <input type="radio" id="group-size--large" name="groupSize" value="large">
-                <label for="group-size--large">Large tour
-                  group</label>
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" name="groupSize" value="small" id="group-size--small">
+                  <label for="group-size--small" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Small tour group
+                  </label>
+                </div>
+
+                <div class="form__radio-group">
+                  <input type="radio" class="form__radio-input" name="groupSize" value="large" id="group-size--large">
+                  <label for="group-size--large" class="form__radio-label">
+                    <span class="form__radio-button"></span>
+                    Large tour group
+                  </label>
+                </div>
               </fieldset>
 
-              <button type="submit">Next Step</button>
+              <fieldset class="form__group uc__margin-top--medium">
+                <button type="submit" class="btn btn--green">Next Step &rarr;</button>
+              </fieldset>
 
             </form>
 

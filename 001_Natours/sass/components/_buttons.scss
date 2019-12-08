@@ -7,12 +7,15 @@
   border-radius: 5rem;
   position: relative;
   font-size: $default-font-size;
+  border: none;
+  transition-property: all;
+  transition-duration: 200ms;
 
   &--white {
     margin-top: 2.5rem;
     background-color: $color-white;
     padding: 1rem 2.5rem;
-    color: $color-gray-dark;
+    color: $color-gray-dark-1;
 
     &::after {
       background-color: $color-white;
@@ -20,20 +23,13 @@
   }
 
   &--green {
-    // margin-top: 2.5rem;
     background-color: $color-primary;
     color: $color-white;
     padding: 1rem 2.5rem;
   }
 
-  &:link,
-  &:visited {
-    // color: $color-gray-dark;
-    transition-property: all;
-    transition-duration: 100ms;
-  }
-
   &:hover {
+    outline: none;
     transform: translateY(-0.2rem);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 
@@ -44,6 +40,7 @@
   }
 
   &:active {
+    outline: none;
     transform: translateY(0);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
