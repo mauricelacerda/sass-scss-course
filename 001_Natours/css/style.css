@@ -479,6 +479,49 @@ body {
     filter: blur(0.3rem) brightness(80%);
     transform: translate(-15%) scale(1); }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: #b3b3b3; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #777;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link {
+    transition-property: all;
+    transition-duration: 200ms;
+    display: inline-block; }
+    .footer__link:link, .footer__link:visited {
+      color: #f7f7f7;
+      text-decoration: none;
+      text-transform: capitalize;
+      border-bottom: 0.1rem solid transparent; }
+    .footer__link:hover, .footer__link:active {
+      color: #7ed56f;
+      border-bottom: 0.1rem solid #7ed56f; }
+  .footer__copyright {
+    width: 80%;
+    padding-top: .7rem;
+    float: right; }
+    .footer__copyright:not(:last-child) {
+      border-top: 1px solid #777;
+      padding-top: 2rem; }
+  .footer__strong {
+    text-transform: uppercase; }
+
 .row {
   max-width: 114rem;
   margin-left: auto;

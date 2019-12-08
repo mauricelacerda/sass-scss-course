@@ -142,12 +142,13 @@
                 <span class="card__heading-span card__heading-span--1">
                   The sea explorer
                 </span>
-              </h4><a href="#section-about" class="btn-text">Learn mode &rarr;</a>s="card__details">
-              <li>3 day tour</li>
-              <li>Up to 30 people</li>
-              <li>2 tour guides</li>
-              <li>Sleep in cozy hotels</li>
-              <li>Difficulty: easy</li>
+              </h4>
+              <ul class="card__details">
+                <li>3 day tour</li>
+                <li>Up to 30 people</li>
+                <li>2 tour guides</li>
+                <li>Sleep in cozy hotels</li>
+                <li>Difficulty: easy</li>
               </ul>
             </div>
 
@@ -282,7 +283,7 @@
               <h2 class="heading-secondary">Start booking now&excl;</h2>
             </header>
 
-            <form action="#" method="POST" class="form">
+            <form action="#" method="POST" class="form" autocomplete="off">
 
               <fieldset class="form__group">
                 <input type="text" name="fullName" id="full-name" class="form__input" placeholder="Full name" required>
@@ -325,6 +326,49 @@
 
     </section>
   </main>
+
+  <footer class="footer" id="footer">
+    <figure class="footer__logo-box">
+      <img src="/001_Natours/img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+    </figure>
+
+    <div class="row">
+      <div class="col-1-of-2">
+        <nav class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Company</a>
+            </li>
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Contact us</a>
+            </li>
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Privacy policy</a>
+            </li>
+            <li class="footer__item">
+              <a href="#footer" class="footer__link">Terms</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-1-of-2">
+        <p class="footer__copyright">
+          Built by <a href="https://maumau.dev" class="footer__link">Mauricio Lacerda</a> for the <a
+            href="https://codingheroes.io/" class="footer__link">Coding Heroes</a> course on <a
+            href="https://www.udemy.com/course/advanced-css-and-sass/" class="footer__link">Advanced CSS and Sass</a>.
+        </p>
+        <p class="footer__copyright">
+          Copyright by &copy; <a href="https://twitter.com/jonasschmedtman" class="footer__link">Jonas Schmedtmann</a>.
+          You are 100% allowed to use this webpage for both personal and commercial use, but <strong
+            class="footer__strong">not</strong> to claim it as your own design. A credit to the original
+          author, Jonas Schmedtmann, is of course highly appreciated!
+        </p>
+      </div>
+    </div>
+  </footer>
 
   <!-- Building a Float Grid Layout  -->
   <!-- <section class="grid-test">
