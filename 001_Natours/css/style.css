@@ -427,6 +427,15 @@ body {
 .form__radio-input {
   display: none; }
 
+.popup {
+  background-color: #fff;
+  width: 50%;
+  height: 40vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 .story {
   width: 75%;
   margin-left: auto;

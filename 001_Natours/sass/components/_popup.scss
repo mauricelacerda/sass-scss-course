@@ -1,0 +1,18 @@
+.popup {
+
+  background-color: $color-white;
+  width: 50%;
+  height: 40vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::before {}
+
+  &__figure {}
+
+  &__heading {}
+
+  &__content {}
+}
