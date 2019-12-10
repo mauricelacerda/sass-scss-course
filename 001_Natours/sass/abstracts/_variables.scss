@@ -26,6 +26,9 @@ $gutter-vertical: 8rem;
 $gutter-horizontal: 6rem;
 
 // Margins:
+
+// TODO I should refactor this as breathing space, so I can use it in margins and paddings consistently. Variables:'$breathing-small', etc.
+
 $margin-small: 1.5rem;
 $margin-medium: 3rem;
 $margin-large: 8rem;
