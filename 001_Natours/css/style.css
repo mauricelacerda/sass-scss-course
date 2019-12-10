@@ -427,14 +427,34 @@ body {
 .form__radio-input {
   display: none; }
 
+.popup-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(27, 26, 26, 0.4);
+  z-index: 50; }
+
 .popup {
   background-color: #fff;
   width: 50%;
-  height: 40vh;
+  height: 45vh;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  border-radius: .3rem;
+  z-index: 51; }
+  .popup__figure {
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    overflow: hidden; }
+  .popup__img {
+    width: 30%; }
+  .popup__content {
+    padding: 2rem 5rem;
+    float: right; }
 
 .story {
   width: 75%;
