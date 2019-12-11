@@ -4,41 +4,90 @@
   left: 0;
   height: 100vh;
   width: 100%;
-  background-color: rgba($color: $color-black, $alpha: .4);
+  background-color: rgba($color: $color-black, $alpha: .7);
   z-index: 50;
+
+  opacity: 0;
+  visibility: hidden;
+
+
+  transition-property: all;
+  transition-duration: 200ms;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target .popup {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
 }
 
 .popup {
 
   background-color: $color-white;
   width: 50%;
-  height: 45vh;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(.25);
+  opacity: 0;
   border-radius: .3rem;
+  overflow: hidden;
   z-index: 51;
+  display: table;
 
-  &::before {}
+  transition-property: all;
+  transition-duration: 500ms;
 
   &__figure {
-    border-top-left-radius: .3rem;
-    border-bottom-left-radius: .3rem;
-    overflow: hidden;
+    width: 34%;
+    display: table-cell;
   }
 
   &__img {
-    width: 30%;
-    // float: left;
-    // clear: left;
+    width: 100%;
+    display: block;
   }
 
   &__content {
+    width: 66%;
     padding: 2rem 5rem;
-    float: right;
+    display: table-cell;
+    vertical-align: middle;
   }
 
-  &__heading {}
+  &__text {
+    column-count: 2;
+    column-gap: 3rem;
+    column-rule: 1px solid $color-gray-light-2;
+
+    // Hyphenation is not supported by Chrome as of Dec'2019
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+
+  &__close {
+    font-size: 3rem;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+
+    &:link,
+    &:visited {
+      color: $color-gray-dark-1;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary;
+    }
+  }
 
 }

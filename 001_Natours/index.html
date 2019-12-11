@@ -188,7 +188,7 @@
             <div class="card__side card__side--back card__side--back-1">
               <div class="card__cta">
                 <p class="card__price">&dollar;297</p>
-                <a href="#section-tours" class="btn btn--white">Book now&excl;</a>
+                <a href="#popup" class="btn btn--white">Book now&excl;</a>
               </div>
             </div>
           </article>
@@ -215,7 +215,7 @@
             <div class="card__side card__side--back card__side--back-2">
               <div class="card__cta">
                 <p class="card__price">&dollar;497</p>
-                <a href="#section-tours" class="btn btn--white">Book now&excl;</a>
+                <a href="#popup" class="btn btn--white">Book now&excl;</a>
               </div>
             </div>
           </article>
@@ -242,7 +242,7 @@
             <div class="card__side card__side--back card__side--back-3">
               <div class="card__cta">
                 <p class="card__price">&dollar;897</p>
-                <a href="#section-tours" class="btn btn--white">Book now&excl;</a>
+                <a href="#popup" class="btn btn--white">Book now&excl;</a>
               </div>
             </div>
           </article>
@@ -253,7 +253,7 @@
         <a href="#section-tours" class="btn btn--green">Discover all tours</a>
       </div>
 
-      <div class="popup-shadow">
+      <div class="popup-shadow" id="popup">
 
         <article class="popup">
 
@@ -263,27 +263,36 @@
           </figure>
 
           <div class="popup__content">
+
             <header class="popup__heading">
-              <h2 class="heading-secondary uc__margin-bottom--medium">Start booking now</h2>
-              <h3 class="heading-tertiary uc__margin-bottom--small">Important - Please read the terms and conditions
+
+              <!-- The <hgroup> element has been removed from the HTML5 (W3C) specification, so I refactored it as <header>.
+
+                Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hgroup -->
+
+              <h2 class="heading-secondary uc__margin-bottom--small">Start booking now</h2>
+              <p class="heading-tertiary uc__margin-bottom--small">Important &colon; Please read the terms and
+                conditions
                 first
-              </h3>
+              </p>
+
+              <!-- The W3 also advises against using h1-h6 as subheadings, unless intended to be the heading for a new section or subsection, so I refactored the <h3> as a <p>.
+
+                Source: https://www.w3.org/TR/html52/common-idioms-without-dedicated-elements.html#common-idioms-without-dedicated-elements -->
+
             </header>
 
-            <p class="paragraph popup__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, laboriosam
-              natus
-              exercitationem officia quia, alias aperiam facere mollitia quo tenetur porro in earum deserunt unde
-              placeat!
-              Autem nostrum reprehenderit quaerat possimus earum nihil neque quo cum itaque iure, necessitatibus
-              quisquam
-              magnam saepe officiis totam consequuntur rerum quidem ipsum explicabo dolorum quis laboriosam similique,
-              voluptatem eveniet! Veniam, impedit! Perspiciatis vel quae exercitationem dolores, impedit officia facilis
-              nesciunt. Voluptate labore enim repellat quidem esse, nihil officiis, sint dicta ab quo aspernatur harum
-              excepturi. Ipsa suscipit adipisci vitae, aperiam culpa ducimus nulla, tenetur, natus repudiandae maiores
-              voluptate necessitatibus possimus placeat illo? Enim, aliquam.</p>
+            <p class="paragraph popup__text">But I must explain to you how all this mistaken idea of
+              denouncing pleasure and praising pain was born and I will give you a complete account of the system, and
+              expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No
+              one rejects, dislikes, or avoids pleasure itself.
+            </p>
+
+            <a href="#popup" class="btn btn--green">Book now</a>
+
           </div>
 
-          <a href="#section-tours" class="btn btn--green">Book now</a>
+          <a href="#section-tours" class="popup__close">&times;</a>
 
         </article>
       </div>
