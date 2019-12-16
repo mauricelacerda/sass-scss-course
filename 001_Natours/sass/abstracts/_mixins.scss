@@ -22,6 +22,8 @@
 // 3) Then we set its 'display' property to 'table';
 // 4) And finally we set 'clear' to 'both';
 
+// For further explanation, see: https://youtu.be/2tC4PIlEz_o
+
 // Here we will create a mixin to write all this code:
 @mixin clearfix {
   &::after {
@@ -29,8 +31,6 @@
     display: table;
     clear: both;
   }
-
-
 }
 
 @mixin calcColumnWidth ($guttersInRow, $numOfColumns, $colSpan) {
