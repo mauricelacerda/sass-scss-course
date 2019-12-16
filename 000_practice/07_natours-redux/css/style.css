@@ -1,8 +1,25 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #959793; }
+
+.uc__text-important {
+  font-weight: 700;
+  text-transform: uppercase; }
 
 .uc__text-align--center {
   text-align: center; }
@@ -30,3 +47,13 @@ body {
 
 .uc__margin-top--huge {
   margin-top: 12rem; }
+
+.row {
+  max-width: 114rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+
+[class^="col-"] {
+  background-color: orangered; }
