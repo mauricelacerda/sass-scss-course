@@ -1,4 +1,8 @@
-// TODO create important text
+.uc__text-important {
+  // For the <strong> and <em> elements
+  font-weight: 700;
+  text-transform: uppercase;
+}
 
 .uc__text-align--center {
   text-align: center;
