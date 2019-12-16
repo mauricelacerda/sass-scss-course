@@ -10,12 +10,27 @@
   animation-name: $animation-name;
 }
 
+// CLEARFIX
+
+// The Clearfix hack is a method used on float layouts. Here's how it works:
+// When a block or inline-block level element has no child elements nor content, its height defaults to zero.
+// When working with float layouts, sometimes you will set 'float' to all child elements of a parent, removing them from the document flow. When that happens, and the parent doesn't have a height specified, it collapses to zero.
+// The Clearfix hack exists to solve this problem.
+
+// 1) First you need to specify a pseudo-element (::before or ::after) to the parent element which has its children floeated out of the document flow;
+// 2) As with all pseudo-elements, we need to define the content. Since we don't want no content to be displayer, we set it to an empty string;
+// 3) Then we set its 'display' property to 'table';
+// 4) And finally we set 'clear' to 'both';
+
+// Here we will create a mixin to write all this code:
 @mixin clearfix {
   &::after {
     content: "";
     display: table;
     clear: both;
   }
+
+
 }
 
 @mixin calcColumnWidth ($guttersInRow, $numOfColumns, $colSpan) {
