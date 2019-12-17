@@ -21,3 +21,30 @@
 }
 
 // TODO create box-shadow variants
+
+// ! 'buildGridColumn' is not working
+// TODO make 'calculateGrid' work
+
+@mixin buildGridColumn($numOfColumns, $colSpam) {
+
+  // Calculate de number of gutters in the row
+  // A 4-col grid row has 3 gutters, etc...
+  $numOfGutters: $numOfColumns - 1;
+
+  // Calculate the sum of the width of all gutters in the grid row
+  $gutterWidthTotal: $numOfGutters * $gutter-horizontal;
+
+  // What is the width of the base column in that row?
+  $baseGridColumn: calc((100% - #{$gutterWidthTotal}) / #{$numOfColumns});
+
+  // Does this column span through more than one grid column?
+  // If so, how many gutters the span go through?
+  $hiddenGutters: $colSpam - 1;
+
+  // Considering all of the above, calculate the width of the column
+  $columnWidth: calc((#{$baseGridColumn} * #{$colSpam})+(#{$hiddenGutters} * #{$gutter-horizontal}));
+
+  // Outputs the calculated width
+  width: $columnWidth;
+
+}
