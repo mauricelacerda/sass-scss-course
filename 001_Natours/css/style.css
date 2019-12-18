@@ -595,9 +595,9 @@ body {
     content: "";
     display: table;
     clear: both; }
-  .row [class^="col-"] {
+  .row [class^='col-'] {
     float: left; }
-    .row [class^="col-"]:not(:last-child) {
+    .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
   .row .col-1-of-2 {
     width: calc((1 * calc((100% - 1 * 6rem) / 2)) + (calc(1 - 1) * 6rem)); }

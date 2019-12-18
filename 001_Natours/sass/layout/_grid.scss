@@ -1,4 +1,7 @@
 .row {
+  // the 1140px Grid was created by Australian designer Andy Taylor. The 1140 grid fits perfectly into a 1280 monitor. On smaller monitors it becomes fluid and adapts to the width of the browser.
+  // https://www.ramotion.com/agency/web-design/cssgrid/
+
   max-width: $grid-width;
   @include center-block;
 
@@ -8,7 +11,7 @@
 
   @include clearfix;
 
-  [class^="col-"] {
+  [class^='col-'] {
     float: left;
 
     &:not(:last-child) {
