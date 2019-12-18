@@ -3,13 +3,13 @@
   // https://www.ramotion.com/agency/web-design/cssgrid/
 
   max-width: $grid-width;
-
   @include margin-center;
-  @include clearfix;
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   }
+
+  @include clearfix;
 
   [class^='col-'] {
     background-color: orangered;
@@ -20,6 +20,7 @@
     }
   }
 
+  //
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
   }
