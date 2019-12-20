@@ -1,0 +1,15 @@
+.hero {
+  background-image: linear-gradient(to bottom right, rgba($color-primary, .6), rgba($color-primary-dark, .6)), url('/000_practice/09_flyout-menu/img/hero.jpg');
+  height: 100vh;
+
+  &__welcome {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba($color-secondary-light, .4);
+    padding: 1rem 5rem;
+    border-radius: 10rem;
+  }
+}
