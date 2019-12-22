@@ -15,6 +15,7 @@
     right: 5rem;
     border-radius: 50%;
     text-align: center;
+    z-index: 5;
   }
 
   &__icon {
@@ -57,10 +58,99 @@
     width: 3.5rem;
   }
 
+  &__checkbox:checked+&__button>&__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked+&__button>&__icon::before {
+    transform: rotateZ(315deg);
+    top: 0;
+    width: 3.5rem;
+  }
+
+  &__checkbox:checked+&__button>&__icon::after {
+    top: 0;
+    transform: rotateZ(-315deg);
+    width: 3.5rem;
+  }
+
+  &__background {
+    background-image: radial-gradient($color-secondary-dark, $white-soft);
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    border-radius: 50%;
+    z-index: 1;
+
+    transition-property: transform;
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(.72, .27, .27, .72);
+  }
+
   &__menu {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 0;
+    opacity: 0;
+
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: cubic-bezier(.29, 0, .35, 1.48);
+  }
+
+  &__list {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
   }
+
+  &__item {
+    margin: 1rem 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-weight: 300;
+    transition-property: all;
+    transition-duration: 300ms;
+    display: inline-block;
+
+    &:link,
+    &:visited {
+      padding: .3rem 4rem;
+      color: $white-soft;
+      background-image: linear-gradient(120deg, transparent 50%, $white-soft 50%);
+      background-size: 250%;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-secondary-dark;
+      transform: translateX(1rem);
+    }
+  }
+
+  &__checkbox:checked~&__background {
+    transform: scale(100);
+    box-shadow: 0 0 20rem 10rem $white-soft;
+  }
+
+  &__checkbox:checked~&__menu {
+    width: 100%;
+    opacity: 1;
+  }
+
 }
