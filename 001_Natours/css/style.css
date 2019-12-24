@@ -571,6 +571,11 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   z-index: 1; }
+  @media screen and (max-width: 56.25em) {
+    .story {
+      transform: skewX(0);
+      width: 100%;
+      padding: 5rem 7rem; } }
   .story:not(:last-child) {
     margin-bottom: 8rem; }
   .story__avatar {
@@ -585,8 +590,14 @@ body {
     clip-path: circle(50% at 50% 50%);
     backface-visibility: hidden;
     transform: translateX(-4rem) skewX(12deg); }
+    @media screen and (max-width: 56.25em) {
+      .story__avatar {
+        transform: translateX(-4rem) skewX(0); } }
   .story__text {
     transform: skewX(12deg); }
+    @media screen and (max-width: 56.25em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__img {
     height: 100%;
     transition-property: all;
@@ -627,6 +638,10 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
+    @media screen and (max-width: 56.25em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -649,9 +664,16 @@ body {
     width: 80%;
     padding-top: .7rem;
     float: right; }
+    @media screen and (max-width: 56.25em) {
+      .footer__copyright {
+        width: 100%;
+        float: none; } }
     .footer__copyright:not(:last-child) {
       border-top: 1px solid #777;
       padding-top: 2rem; }
+      @media screen and (max-width: 56.25em) {
+        .footer__copyright:not(:last-child) {
+          margin-top: 2rem; } }
   .footer__strong {
     text-transform: uppercase; }
 
@@ -704,11 +726,20 @@ body {
   background-size: cover;
   background-position: top 0 center;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   /* 'clip-path' allow us to define shapes where the element will be visible */
   /* For inspiration and to explore possibilities,
       check Clippy — CSS clip-path maker
       at https://bennettfeely.com/clippy/ */ }
+  @media screen and (max-width: 75em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media screen and (max-width: 56.25em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%); } }
+  @media screen and (max-width: 37.5em) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -739,9 +770,13 @@ body {
     right: 5.5rem;
     z-index: 5;
     border-radius: 50%;
-    box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15);
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15); }
+    @media screen and (max-width: 56.25em) {
+      .navigation__button {
+        top: 3rem;
+        right: 3rem; } }
   .navigation__background {
     height: 6rem;
     width: 6rem;
@@ -754,6 +789,10 @@ body {
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); }
+    @media screen and (max-width: 56.25em) {
+      .navigation__background {
+        top: 3.5rem;
+        right: 3.5rem; } }
   .navigation__nav {
     height: 100vh;
     z-index: 4;
@@ -784,6 +823,9 @@ body {
     transition-property: all;
     transition-duration: 300ms;
     display: inline-block; }
+    @media screen and (max-width: 37.5em) {
+      .navigation__link {
+        font-size: 6vw; } }
     .navigation__link span {
       margin-right: 1.5rem;
       display: inline-block; }
@@ -834,8 +876,14 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
-  padding: 25rem 0;
+  padding: 30rem 0 30rem;
   margin-top: -25vh; }
+  @media screen and (max-width: 75em) {
+    .section-about {
+      padding-top: 30rem; } }
+  @media screen and (max-width: 56.25em) {
+    .section-about {
+      padding: 35rem 0 50rem; } }
 
 .section-features {
   background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/001_Natours/img/nat-4.jpg");
@@ -854,6 +902,12 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative; }
+  @media screen and (max-width: 75em) {
+    .section-stories {
+      padding: 10rem 0; } }
+  @media screen and (max-width: 56.25em) {
+    .section-stories {
+      padding: 8rem 0; } }
 
 .section-book {
   background-image: linear-gradient(to bottom right, #7ed56f, #28b485);
