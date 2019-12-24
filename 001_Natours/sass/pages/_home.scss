@@ -7,9 +7,11 @@
 .section-features {
   background-image: linear-gradient(to bottom right, rgba($color: $color-primary-light, $alpha: .8), rgba($color: $color-primary-dark, $alpha: .8)), url('/001_Natours/img/nat-4.jpg');
   background-size: cover;
-  padding: 20rem;
+  padding: 20rem 0;
   transform: skewY(-7deg);
   margin-top: -15rem;
+
+  @include respond(tablet-portrait) {}
 
   &>* {
     transform: skewY(7deg);
