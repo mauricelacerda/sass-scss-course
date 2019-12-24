@@ -67,3 +67,91 @@
 // top: 50%;
 // left: 50%;
 // transform: translate(-50%, -50%);
+
+
+// MEDIA QUERY MANAGER
+
+/*
+
+0 - 600px: phone
+600 - 900px: tablet portrait
+900 - 1200px: tablet landscape
+1200 - 1800px: default styles
+1800+px: big desktops
+
+$breakpoint values
+
+- phone
+- tablet-portrait
+- tablet-landscape
+- big-desktop
+
+=> 1em = 16px;
+
+MEDIA QUERIES WORKFLOW
+(a nice order to think about when writing media queries)
+
+1) Base
+2) Typography
+3) General layout
+4) Grid
+5) Page layout
+6) Components
+
+*/
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint==phone {
+
+    @media screen and (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+
+  }
+
+  @if $breakpoint==tablet-portrait {
+
+    @media screen and (max-width: 56.25em) {
+      // 900px
+      @content;
+    }
+
+  }
+
+  @if $breakpoint==tablet-landscape {
+
+    @media screen and (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+
+  }
+
+  @if $breakpoint==big-desktop {
+
+    @media screen and (min-width: 112.5em) {
+      // 1800px
+      @content;
+    }
+
+  }
+}
+
+/*
+
+  In media queries, font-relative CSS units (em & rem) are NOT AFFECTED by the root font-size settings. This means that (in media queries) 1em & 1rem always equals the font-size defined in the Browser.
+
+  Most browsers' default font-size is 16px. But if the user changes it to, say, 20px, than the media query will treat BOTH 1em & 1rem as 20px, no matter what we set as root font-size definitions.
+
+  Safari browsers, however, produce unexpected behavior when using REM in media queries, so the community decided to use EM's to define breakpoints.
+
+  What you do is devide the breakpoint value in PX by 16px (default font-size in most browsers), and set it as EM's.
+
+  Ex: for breakpoint 600px, divide 600px/16px to get 37.5em;
+
+  For more on this topic:
+  https://dev.to/danburzo/making-sense-of-css-media-queries-in-the-year-2019-52jj
+
+*/
