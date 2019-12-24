@@ -1,5 +1,6 @@
 .story {
   width: 75%;
+
   @include center-block;
   @include box-shadow--smooth;
   background-color: rgba($color: $color-white, $alpha: .6);
@@ -8,6 +9,12 @@
   font-size: $default-font-size;
   transform: skewX(-12deg);
   z-index: 1;
+
+  @include respond(tablet-portrait) {
+    transform: skewX(0);
+    width: 100%;
+    padding: 5rem 7rem;
+  }
 
   &:not(:last-child) {
     margin-bottom: $margin-large;
@@ -29,10 +36,18 @@
 
     transform: translateX(-4rem) skewX(12deg);
 
+    @include respond(tablet-portrait) {
+      transform: translateX(-4rem) skewX(0);
+    }
+
   }
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(tablet-portrait) {
+      transform: skewX(0);
+    }
   }
 
   &__img {
