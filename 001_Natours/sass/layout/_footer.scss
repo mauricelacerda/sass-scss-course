@@ -18,6 +18,11 @@
     border-top: 1px solid $color-gray-dark-1;
     padding-top: 2rem;
     display: inline-block;
+
+    @include respond(tablet-portrait) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list {
@@ -59,9 +64,18 @@
     padding-top: .7rem;
     float: right;
 
+    @include respond(tablet-portrait) {
+      width: 100%;
+      float: none;
+    }
+
     &:not(:last-child) {
       border-top: 1px solid $color-gray-dark-1;
       padding-top: 2rem;
+
+      @include respond(tablet-portrait) {
+        margin-top: 2rem;
+      }
     }
   }
 
