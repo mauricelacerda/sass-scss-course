@@ -1,4 +1,48 @@
 @charset "UTF-8";
+/*
+
+0 - 600px: phone
+600 - 900px: tablet portrait
+900 - 1200px: tablet landscape
+1200 - 1800px: default styles
+1800+px: big desktops
+
+$breakpoint values
+
+- phone
+- tablet-portrait
+- tablet-landscape
+- big-desktop
+
+=> 1em = 16px;
+
+MEDIA QUERIES WORKFLOW
+(a nice order to think about when writing media queries)
+
+1) Base
+2) Typography
+3) General layout
+4) Grid
+5) Page layout
+6) Components
+
+*/
+/*
+
+  In media queries, font-relative CSS units (em & rem) are NOT AFFECTED by the root font-size settings. This means that (in media queries) 1em & 1rem always equals the font-size defined in the Browser.
+
+  Most browsers' default font-size is 16px. But if the user changes it to, say, 20px, than the media query will treat BOTH 1em & 1rem as 20px, no matter what we set as root font-size definitions.
+
+  Safari browsers, however, produce unexpected behavior when using REM in media queries, so the community decided to use EM's to define breakpoints.
+
+  What you do is devide the breakpoint value in PX by 16px (default font-size in most browsers), and set it as EM's.
+
+  Ex: for breakpoint 600px, divide 600px/16px to get 37.5em;
+
+  For more on this topic:
+  https://dev.to/danburzo/making-sense-of-css-media-queries-in-the-year-2019-52jj
+
+*/
 /* Animations */
 @keyframes moveInLeft {
   0% {
@@ -39,12 +83,24 @@
 
 html {
   font-size: 62.5%; }
+  @media screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   padding: 3rem;
   /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
   box-sizing: border-box;
   /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */ }
+  @media screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -66,12 +122,20 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation-name: moveInLeft; }
+    @media screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 5rem;
+        letter-spacing: 1.2rem; } }
   .heading-primary--sub {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.7rem;
     animation-name: moveInRight;
     margin-left: -1.5rem; }
+    @media screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 1.5rem;
+        letter-spacing: .5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -84,6 +148,12 @@ body {
   color: transparent;
   transition-property: all;
   transition-duration: 200ms; }
+  @media screen and (max-width: 56.25em) {
+    .heading-secondary {
+      font-size: 3rem; } }
+  @media screen and (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2.5rem; } }
   .heading-secondary:hover {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: 0.5rem 1rem 2rem rgba(27, 26, 26, 0.2); }
@@ -591,14 +661,28 @@ body {
   margin-right: auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
   .row::after {
     content: "";
     display: table;
     clear: both; }
+  @media screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row [class^='col-'] {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
+      @media screen and (max-width: 56.25em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media screen and (max-width: 56.25em) {
+      .row [class^='col-'] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((1 * calc((100% - 1 * 6rem) / 2)) + (calc(1 - 1) * 6rem)); }
   .row .col-1-of-3 {
@@ -756,7 +840,7 @@ body {
 .section-features {
   background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/001_Natours/img/nat-4.jpg");
   background-size: cover;
-  padding: 20rem;
+  padding: 20rem 0;
   transform: skewY(-7deg);
   margin-top: -15rem; }
   .section-features > * {
