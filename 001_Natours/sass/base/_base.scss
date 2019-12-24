@@ -11,12 +11,31 @@
 }
 
 html {
-  font-size: 62.5%; // makes font-size: 10px;
+  font-size: 62.5%; // makes root font-size: 10px; 10/16px
+
+  // Making the root font-size adapt to screen sizes
+  @include respond(tablet-landscape) {
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tablet-portrait) {
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  }
+
 }
 
 body {
   padding: 3rem;
   /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
+
+  @include respond(tablet-portrait) {
+    padding: 0;
+  }
+
   box-sizing: border-box;
   /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */
 }
