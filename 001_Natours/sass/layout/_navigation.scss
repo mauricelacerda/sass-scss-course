@@ -15,11 +15,14 @@
     right: 5.5rem;
     z-index: 5;
     border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
     @include box-shadow--smooth;
 
-    text-align: center;
-
-    cursor: pointer;
+    @include respond(tablet-portrait) {
+      top: 3rem;
+      right: 3rem;
+    }
   }
 
   &__background {
@@ -35,6 +38,11 @@
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tablet-portrait) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {
@@ -77,6 +85,10 @@
     transition-property: all;
     transition-duration: 300ms;
     display: inline-block;
+
+    @include respond(phone) {
+      font-size: 6vw;
+    }
 
     span {
       margin-right: $margin-small;
