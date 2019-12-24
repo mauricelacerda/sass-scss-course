@@ -11,11 +11,23 @@
   background-position: top 0 center;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   /* 'clip-path' allow us to define shapes where the element will be visible */
   /* For inspiration and to explore possibilities,
       check Clippy — CSS clip-path maker
       at https://bennettfeely.com/clippy/ */
+
+  @include respond(tablet-landscape) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  @include respond(tablet-portrait) {
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+  }
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;
