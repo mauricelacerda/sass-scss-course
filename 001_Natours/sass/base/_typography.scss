@@ -58,8 +58,12 @@ body {
   transition-property: all;
   transition-duration: 200ms;
 
-  @include respond(tablet-portrait) {
+  @include respond(tablet-landscape) {
     font-size: 3rem;
+  }
+
+  @include respond(tablet-portrait) {
+    // font-size: 3rem;
   }
 
   @include respond(phone) {
