@@ -148,7 +148,7 @@ body {
   color: transparent;
   transition-property: all;
   transition-duration: 200ms; }
-  @media screen and (max-width: 56.25em) {
+  @media screen and (max-width: 75em) {
     .heading-secondary {
       font-size: 3rem; } }
   @media screen and (max-width: 37.5em) {
@@ -383,22 +383,49 @@ body {
     transition-property: all;
     transition-duration: 200ms;
     outline-offset: 2rem; }
+    @media screen and (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.333333%;
+        box-shadow: 0 1.5rem 3rem rgba(27, 26, 26, 0.2); } }
     .composition__photo--p1 {
       top: 0;
       left: 0; }
+      @media screen and (max-width: 56.25em) {
+        .composition__photo--p1 {
+          transform: scale(1.2); } }
     .composition__photo--p2 {
       top: 3rem;
       right: 0; }
+      @media screen and (max-width: 56.25em) {
+        .composition__photo--p2 {
+          top: -1.2rem;
+          transform: scale(1.3);
+          z-index: 2; } }
     .composition__photo--p3 {
       top: 10rem;
       left: 20%; }
+      @media screen and (max-width: 56.25em) {
+        .composition__photo--p3 {
+          top: 1rem;
+          left: 0;
+          transform: scale(1.1); } }
     .composition__photo:hover {
       transform: scale(1.05) translateY(-0.5rem);
       box-shadow: 0 2.5rem 4rem rgba(27, 26, 26, 0.6);
       z-index: 2;
       outline: 1.5rem solid #55c57a; }
+      @media screen and (max-width: 56.25em) {
+        .composition__photo:hover {
+          outline: none;
+          transform: scale(1.5);
+          z-index: 3; } }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
+    @media screen and (max-width: 56.25em) {
+      .composition:hover .composition__photo:not(:hover) {
+        transform: scale(1.1); } }
 
 .feature-box {
   padding: 2.5rem;
@@ -437,6 +464,9 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block; }
+  @media screen and (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15);
@@ -467,6 +497,10 @@ body {
   width: 45%;
   display: inline-block;
   font-size: 1.6rem; }
+  @media screen and (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 1rem; } }
   .form__radio-group * {
     cursor: pointer; }
 
@@ -916,10 +950,25 @@ body {
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("/001_Natours/img/nat-10.jpg");
   background-size: cover;
-  height: 50rem;
   border-radius: .3rem;
   box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15);
-  background-position: 0 50%; }
+  background-position: 0 50%;
+  margin-left: 2rem;
+  margin-right: 2rem; }
+  @media screen and (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 60%, transparent 60%), url("/001_Natours/img/nat-10.jpg");
+      background-size: cover; } }
+  @media screen and (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 100%), url("/001_Natours/img/nat-10.jpg");
+      background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media screen and (max-width: 75em) {
+      .book__form {
+        width: 60%; } }
+    @media screen and (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
