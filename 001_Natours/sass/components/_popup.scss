@@ -29,7 +29,7 @@
 .popup {
 
   background-color: $color-white;
-  width: 50%;
+  max-width: 70%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -43,14 +43,28 @@
   transition-property: all;
   transition-duration: 500ms;
 
+  @include respond(tablet-portrait) {
+    max-width: 90%;
+  }
+
   &__figure {
     width: 34%;
     display: table-cell;
+    vertical-align: middle;
+
+    @include respond(tablet-portrait) {
+      width: 40%;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__img {
     width: 100%;
     display: block;
+    margin: 2rem 0;
   }
 
   &__content {
@@ -58,6 +72,14 @@
     padding: 2rem 5rem;
     display: table-cell;
     vertical-align: middle;
+
+    @include respond(tablet-portrait) {
+      width: 60%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -68,6 +90,10 @@
     // Hyphenation is not supported by Chrome as of Dec'2019
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tablet-portrait) {
+      column-count: 1;
+    }
   }
 
   &__close {
