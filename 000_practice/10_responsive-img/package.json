@@ -1,0 +1,14 @@
+{
+  "name": "responsive-img",
+  "version": "1.0.0",
+  "description": "Working with responsive images",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Mauricio Lacerda",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

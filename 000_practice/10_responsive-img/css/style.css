@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  box-sizing: border-box; }
+
+.logo__figbox {
+  width: fit-content;
+  height: auto;
+  border: 2px solid hotpink;
+  margin: 1rem 2rem; }

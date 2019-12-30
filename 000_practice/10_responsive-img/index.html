@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Responsive Images</title>
+</head>
+
+<body>
+  <div class="logo-box">
+    <figure class="logo__figbox">
+      <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="logo" class="logo">
+      <figcaption>Density Switching</figcaption>
+    </figure>
+
+    <figure class="logo__figbox">
+      <picture class="logo">
+        <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+          media="screen and (max-width: 600px)">
+        <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="logo" class="logo">
+      </picture>
+      <figcaption>Art Direction</figcaption>
+    </figure>
+  </div>
+</body>
+
+</html>
