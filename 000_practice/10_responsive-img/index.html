@@ -11,11 +11,14 @@
 
 <body>
   <div class="logo-box">
+
+    <!-- Density Switching -->
     <figure class="logo__figbox">
       <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="logo" class="logo">
       <figcaption>Density Switching</figcaption>
     </figure>
 
+    <!-- Art Direction -->
     <figure class="logo__figbox">
       <picture class="logo">
         <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
@@ -23,6 +26,16 @@
         <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="logo" class="logo">
       </picture>
       <figcaption>Art Direction</figcaption>
+    </figure>
+
+    <!-- Resolution Switching -->
+    <figure class="logo__figbox">
+
+      <img srcset="img/nat-1-large.jpg 1000w, img/nat-1.jpg 300w"
+        sizes="(max-width:600px) 30vw, (max-width:900px) 50vw, 80vw" alt="image" src="img/nat-1-large.jpg">
+
+      <figcaption>Resolution Switching</figcaption>
+
     </figure>
   </div>
 </body>
