@@ -811,7 +811,7 @@ body {
 .header {
   height: 95vh;
   /* Define the 'linear-gradient' before the image url to make it appear on top */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   background-position: top 0 center;
   position: relative;
@@ -820,6 +820,9 @@ body {
   /* For inspiration and to explore possibilities,
       check Clippy — CSS clip-path maker
       at https://bennettfeely.com/clippy/ */ }
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), screen and (min-width: 112.5em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url("../img/hero.jpg"); } }
   @media screen and (max-width: 75em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
@@ -977,11 +980,14 @@ body {
       padding: 35rem 0 50rem; } }
 
 .section-features {
-  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/001_Natours/img/nat-4.jpg");
+  background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("/001_Natours/img/nat-4-medium.jpg");
   background-size: cover;
   padding: 20rem 0;
   transform: skewY(-7deg);
   margin-top: -15rem; }
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), screen and (min-width: 112.5em) {
+    .section-features {
+      background-image: linear-gradient(to bottom right, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url("/001_Natours/img/nat-4.jpg"); } }
   .section-features > * {
     transform: skewY(7deg); }
 
@@ -1007,19 +1013,22 @@ body {
 .book {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("/001_Natours/img/nat-10.jpg");
   background-size: cover;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15);
   background-position: 0 50%;
   margin-left: 2rem;
   margin-right: 2rem; }
   @media screen and (max-width: 75em) {
     .book {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 60%, transparent 60%), url("/001_Natours/img/nat-10.jpg");
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 60%, transparent 60%), url("/001_Natours/img/nat-10-medium.jpg");
       background-size: cover; } }
   @media screen and (max-width: 56.25em) {
     .book {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 100%), url("/001_Natours/img/nat-10.jpg");
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 100%), url("/001_Natours/img/nat-10-medium.jpg");
       background-size: cover; } }
+  @media screen and (min-resolution: 192dpi) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("/001_Natours/img/nat-10.jpg"); } }
   .book__form {
     width: 50%;
     padding: 6rem; }

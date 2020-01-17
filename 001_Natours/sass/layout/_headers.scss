@@ -3,10 +3,23 @@
 .header {
   height: 95vh;
   /* Define the 'linear-gradient' before the image url to make it appear on top */
-  background-image: linear-gradient(to right bottom,
+  background-image: linear-gradient(
+      to right bottom,
       rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)),
-    url('../img/hero.jpg');
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img/hero-small.jpg');
+
+  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    screen and (min-width: 112.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)
+      ),
+      url('../img/hero.jpg');
+  }
+
   background-size: cover;
   background-position: top 0 center;
   position: relative;
