@@ -1,7 +1,7 @@
 /* Above the Fold */
 
 .header {
-  height: 95vh;
+  height: 85vh;
   /* Define the 'linear-gradient' before the image url to make it appear on top */
   background-image: linear-gradient(
       to right bottom,
@@ -31,15 +31,15 @@
       at https://bennettfeely.com/clippy/ */
 
   @include respond(tablet-landscape) {
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
   }
 
   @include respond(tablet-portrait) {
-    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   }
 
   @include respond(phone) {
-    clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
   }
 
   &__logo-box {
