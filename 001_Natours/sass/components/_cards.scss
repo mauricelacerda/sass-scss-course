@@ -1,12 +1,10 @@
 .card {
-
   -moz-perspective: 150rem;
   perspective: 150rem;
   position: relative;
   height: 53rem;
 
   &__side {
-
     height: 53rem;
     transition-property: all;
     transition-duration: 800ms;
@@ -16,7 +14,7 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     overflow: hidden;
     @include box-shadow--smooth;
 
@@ -29,17 +27,28 @@
       text-align: center;
 
       &-1 {
-        background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
       }
 
       &-2 {
-        background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        );
       }
 
       &-3 {
-        background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark);
+        background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        );
       }
-
     }
   }
 
@@ -57,21 +66,95 @@
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
 
     &--1 {
-      background-image: linear-gradient(to bottom right, $color-secondary-light, $color-secondary-dark), url('/001_Natours/img/nat-5.jpg');
+      background-image: linear-gradient(
+          to bottom right,
+          $color-secondary-light,
+          $color-secondary-dark
+        ),
+        url('../img/nat-5-small.jpg');
+
+      @media screen and (min-width: 37.5em),
+        screen and (max-width: 37.5em) and (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to bottom right,
+            $color-secondary-light,
+            $color-secondary-dark
+          ),
+          url('../img/nat-5-medium.jpg');
+      }
+
+      @media screen and (min-width: 112.5em),
+        screen and (min-width: 75em) and (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to bottom right,
+            $color-secondary-light,
+            $color-secondary-dark
+          ),
+          url('../img/nat-5.jpg');
+      }
     }
 
     &--2 {
-      background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark), url('/001_Natours/img/nat-6.jpg');
+      background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        ),
+        url('../img/nat-6-small.jpg');
+
+      @media screen and (min-width: 37.5em),
+        screen and (max-width: 37.5em) and (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to bottom right,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url('../img/nat-6-medium.jpg');
+      }
+
+      @media screen and (min-width: 112.5em),
+        screen and (min-width: 75em) and (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to bottom right,
+            $color-primary-light,
+            $color-primary-dark
+          ),
+          url('../img/nat-6.jpg');
+      }
     }
 
     &--3 {
-      background-image: linear-gradient(to bottom right, $color-tertiary-light, $color-tertiary-dark), url('/001_Natours/img/nat-7.jpg');
-    }
+      background-image: linear-gradient(
+          to bottom right,
+          $color-tertiary-light,
+          $color-tertiary-dark
+        ),
+        url('../img/nat-7-small.jpg');
 
+      @media screen and (min-width: 37.5em),
+        screen and (max-width: 37.5em) and (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to bottom right,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url('../img/nat-7-medium.jpg');
+      }
+
+      @media screen and (min-width: 112.2em),
+        screen and (min-width: 75em) and (min-resolution: 192dpi) {
+        background-image: linear-gradient(
+            to bottom right,
+            $color-tertiary-light,
+            $color-tertiary-dark
+          ),
+          url('../img/nat-7.jpg');
+      }
+    }
   }
 
   &__heading {
@@ -87,26 +170,36 @@
   }
 
   &__heading-span {
-
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
     &--1 {
-      background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .55), $color-secondary-dark);
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.55),
+        $color-secondary-dark
+      );
     }
 
     &--2 {
-      background-image: linear-gradient(to right bottom, rgba($color-primary-light, .55), $color-primary-dark);
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.55),
+        $color-primary-dark
+      );
     }
 
     &--3 {
-      background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .55), $color-tertiary-dark);
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-tertiary-light, 0.55),
+        $color-tertiary-dark
+      );
     }
   }
 
   &__details {
-
     padding: 3rem;
     list-style: none;
     width: 80%;
@@ -148,7 +241,7 @@
 
   @include respond(tablet-portrait) {
     height: auto;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     @include box-shadow--smooth;
 
     &__side {
