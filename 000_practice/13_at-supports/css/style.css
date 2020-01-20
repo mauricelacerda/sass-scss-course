@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(#202022aa, #202022aa),
+    url('../img/nat-5.jpg');
+  background-size: cover;
+  background-position: 50%;
+}
+
+@supports (backdrop-filter: blur(0)) {
+  body {
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background-image: url('../img/nat-5.jpg');
+  }
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  font-variant: small-caps;
+  border-radius: 0.4rem;
+  background-color: #f2f3f5aa;
+  min-width: 40%;
+  height: 30vh;
+}
+
+p {
+  margin: 0 2rem;
+}
