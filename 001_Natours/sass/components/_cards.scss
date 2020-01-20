@@ -78,7 +78,8 @@
         url('../img/nat-5-small.jpg');
 
       @media screen and (min-width: 37.5em),
-        screen and (max-width: 37.5em) and (min-resolution: 192dpi) {
+        screen and (max-width: 37.5em) and (min-resolution: 192dpi),
+        screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(
             to bottom right,
             $color-secondary-light,
@@ -88,7 +89,8 @@
       }
 
       @media screen and (min-width: 112.5em),
-        screen and (min-width: 75em) and (min-resolution: 192dpi) {
+        screen and (min-width: 75em) and (min-resolution: 192dpi),
+        screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(
             to bottom right,
             $color-secondary-light,
@@ -107,7 +109,8 @@
         url('../img/nat-6-small.jpg');
 
       @media screen and (min-width: 37.5em),
-        screen and (max-width: 37.5em) and (min-resolution: 192dpi) {
+        screen and (max-width: 37.5em) and (min-resolution: 192dpi),
+        screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(
             to bottom right,
             $color-primary-light,
@@ -117,7 +120,8 @@
       }
 
       @media screen and (min-width: 112.5em),
-        screen and (min-width: 75em) and (min-resolution: 192dpi) {
+        screen and (min-width: 75em) and (min-resolution: 192dpi),
+        screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(
             to bottom right,
             $color-primary-light,
@@ -136,7 +140,8 @@
         url('../img/nat-7-small.jpg');
 
       @media screen and (min-width: 37.5em),
-        screen and (max-width: 37.5em) and (min-resolution: 192dpi) {
+        screen and (max-width: 37.5em) and (min-resolution: 192dpi),
+        screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(
             to bottom right,
             $color-tertiary-light,
@@ -146,7 +151,8 @@
       }
 
       @media screen and (min-width: 112.2em),
-        screen and (min-width: 75em) and (min-resolution: 192dpi) {
+        screen and (min-width: 75em) and (min-resolution: 192dpi),
+        screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
         background-image: linear-gradient(
             to bottom right,
             $color-tertiary-light,
