@@ -13,7 +13,7 @@
   }
 
   @include respond(phone) {
-    margin-top: -55vw;
+    margin-top: -25vh;
   }
 }
 
@@ -36,11 +36,19 @@
 
   background-size: cover;
   padding: 20rem 0;
-  transform: skewY(-7deg);
+  transform: skewY(-5deg);
   margin-top: -15rem;
 
   & > * {
-    transform: skewY(7deg);
+    transform: skewY(5deg);
+  }
+
+  @include respond(tablet-landscape) {
+    transform: skewY(-7deg);
+
+    & > * {
+      transform: skewY(7deg);
+    }
   }
 }
 

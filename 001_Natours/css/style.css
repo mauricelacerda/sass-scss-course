@@ -834,7 +834,7 @@ body {
   background-size: cover;
   background-position: top 0 center;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
   /* 'clip-path' allow us to define shapes where the element will be visible */
   /* For inspiration and to explore possibilities,
       check Clippy — CSS clip-path maker
@@ -999,19 +999,24 @@ body {
       margin-top: -18vh; } }
   @media screen and (max-width: 37.5em) {
     .section-about {
-      margin-top: -55vw; } }
+      margin-top: -25vh; } }
 
 .section-features {
   background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4-medium.jpg");
   background-size: cover;
   padding: 20rem 0;
-  transform: skewY(-7deg);
+  transform: skewY(-5deg);
   margin-top: -15rem; }
   @media screen and (min-resolution: 192dpi), screen and (min-width: 112.5em) {
     .section-features {
       background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg"); } }
   .section-features > * {
-    transform: skewY(7deg); }
+    transform: skewY(5deg); }
+  @media screen and (max-width: 75em) {
+    .section-features {
+      transform: skewY(-7deg); }
+      .section-features > * {
+        transform: skewY(7deg); } }
 
 .section-tours {
   background-color: #f7f7f7;
