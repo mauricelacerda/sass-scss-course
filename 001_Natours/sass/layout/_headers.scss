@@ -25,22 +25,28 @@
   background-position: top 0 center;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
-  /* 'clip-path' allow us to define shapes where the element will be visible */
-  /* For inspiration and to explore possibilities,
-      check Clippy — CSS clip-path maker
-      at https://bennettfeely.com/clippy/ */
-
-  @include respond(tablet-landscape) {
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
-  }
+    /* 'clip-path' allow us to define shapes where the element will be visible */
+    /* For inspiration and to explore possibilities,
+          check Clippy — CSS clip-path maker
+          at https://bennettfeely.com/clippy/ */
 
-  @include respond(tablet-portrait) {
-    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  }
+    @include respond(tablet-landscape) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
+    }
 
-  @include respond(phone) {
-    clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+    @include respond(tablet-portrait) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
+
+    @include respond(phone) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
+    }
   }
 
   &__logo-box {

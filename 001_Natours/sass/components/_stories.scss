@@ -3,8 +3,8 @@
 
   @include center-block;
   @include box-shadow--smooth;
-  background-color: rgba($color: $color-white, $alpha: .6);
-  border-radius: .3rem;
+  background-color: rgba($color: $color-white, $alpha: 0.6);
+  border-radius: 0.3rem;
   padding: 6rem 9rem;
   font-size: $default-font-size;
   transform: skewX(-12deg);
@@ -26,20 +26,24 @@
     width: 15rem;
     float: left;
 
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-
     overflow: hidden;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     backface-visibility: hidden;
+
+    border-radius: 100vh;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+      border-radius: initial;
+    }
 
     transform: translateX(-4rem) skewX(12deg);
 
     @include respond(tablet-portrait) {
       transform: translateX(-4rem) skewX(0);
     }
-
   }
 
   &__text {
@@ -69,7 +73,6 @@
     text-align: center;
     transition-property: all;
     transition-duration: 500ms;
-
   }
 
   &:hover &__caption {
@@ -78,10 +81,8 @@
   }
 
   &:hover &__img {
-    -webkit-filter: blur(.3rem) brightness(80%);
-    filter: blur(.3rem) brightness(80%);
+    -webkit-filter: blur(0.3rem) brightness(80%);
+    filter: blur(0.3rem) brightness(80%);
     transform: translate(-15%) scale(1);
   }
-
-
 }
