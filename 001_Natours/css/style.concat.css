@@ -83,13 +83,13 @@ MEDIA QUERIES WORKFLOW
 
 html {
   font-size: 62.5%; }
-  @media screen and (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media screen and (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
@@ -98,9 +98,13 @@ body {
   /* Set the box-sizing on <body>, than use 'inherit' on the Resets */
   box-sizing: border-box;
   /* This is considered a better practice, because it make it easier to change the 'box-sizing' properties in plugins and web components */ }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -122,7 +126,7 @@ body {
     font-weight: 400;
     letter-spacing: 3.5rem;
     animation-name: moveInLeft; }
-    @media screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         font-size: 5rem;
         letter-spacing: 1.2rem; } }
@@ -132,7 +136,7 @@ body {
     letter-spacing: 1.7rem;
     animation-name: moveInRight;
     margin-left: -1.5rem; }
-    @media screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         font-size: 1.5rem;
         letter-spacing: 0.5rem; } }
@@ -149,10 +153,10 @@ body {
   color: transparent;
   transition-property: all;
   transition-duration: 200ms; }
-  @media screen and (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .heading-secondary {
       font-size: 3rem; } }
-  @media screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2.5rem; } }
   .heading-secondary:hover {
@@ -323,26 +327,26 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); } }
     .card__picture--1 {
       background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("../img/nat-5-small.jpg"); }
-      @media screen and (min-width: 37.5em), screen and (max-width: 37.5em) and (min-resolution: 192dpi), screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
+      @media only screen and (min-width: 37.5em), only screen and (max-width: 37.5em) and (min-resolution: 192dpi), only screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
         .card__picture--1 {
           background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("../img/nat-5-medium.jpg"); } }
-      @media screen and (min-width: 112.5em), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
+      @media only screen and (min-width: 112.5em), only screen and (min-width: 75em) and (min-resolution: 192dpi), only screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
         .card__picture--1 {
           background-image: linear-gradient(to bottom right, #ffb900, #ff7730), url("../img/nat-5.jpg"); } }
     .card__picture--2 {
       background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url("../img/nat-6-small.jpg"); }
-      @media screen and (min-width: 37.5em), screen and (max-width: 37.5em) and (min-resolution: 192dpi), screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
+      @media only screen and (min-width: 37.5em), only screen and (max-width: 37.5em) and (min-resolution: 192dpi), only screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
         .card__picture--2 {
           background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url("../img/nat-6-medium.jpg"); } }
-      @media screen and (min-width: 112.5em), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
+      @media only screen and (min-width: 112.5em), only screen and (min-width: 75em) and (min-resolution: 192dpi), only screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
         .card__picture--2 {
           background-image: linear-gradient(to bottom right, #7ed56f, #28b485), url("../img/nat-6.jpg"); } }
     .card__picture--3 {
       background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../img/nat-7-small.jpg"); }
-      @media screen and (min-width: 37.5em), screen and (max-width: 37.5em) and (min-resolution: 192dpi), screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
+      @media only screen and (min-width: 37.5em), only screen and (max-width: 37.5em) and (min-resolution: 192dpi), only screen and (max-width: 37.5em) and (-webkit-min-device-pixel-ratio: 2) {
         .card__picture--3 {
           background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../img/nat-7-medium.jpg"); } }
-      @media screen and (min-width: 112.2em), screen and (min-width: 75em) and (min-resolution: 192dpi), screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
+      @media only screen and (min-width: 112.2em), only screen and (min-width: 75em) and (min-resolution: 192dpi), only screen and (min-width: 75em) and (-webkit-min-device-pixel-ratio: 2) {
         .card__picture--3 {
           background-image: linear-gradient(to bottom right, #2998ff, #5643fa), url("../img/nat-7.jpg"); } }
   .card__heading {
@@ -392,7 +396,7 @@ body {
       font-weight: 400;
       display: block;
       text-transform: uppercase; }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .card {
       height: auto;
       border-radius: 0.3rem;
@@ -442,7 +446,7 @@ body {
     transition-property: all;
     transition-duration: 200ms;
     outline-offset: 2rem; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__photo {
         float: left;
         position: relative;
@@ -451,13 +455,13 @@ body {
     .composition__photo--p1 {
       top: 0;
       left: 0; }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           transform: scale(1.2); } }
     .composition__photo--p2 {
       top: 3rem;
       right: 0; }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
           top: -1.2rem;
           transform: scale(1.3);
@@ -465,7 +469,7 @@ body {
     .composition__photo--p3 {
       top: 10rem;
       left: 20%; }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
           top: 1rem;
           left: 0;
@@ -475,14 +479,14 @@ body {
       box-shadow: 0 2.5rem 4rem rgba(27, 26, 26, 0.6);
       z-index: 2;
       outline: 1.5rem solid #55c57a; }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo:hover {
           outline: none;
           transform: scale(1.5);
           z-index: 3; } }
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition:hover .composition__photo:not(:hover) {
         transform: scale(1.1); } }
 
@@ -523,7 +527,7 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block; }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
   .form__input:focus {
@@ -556,7 +560,7 @@ body {
   width: 45%;
   display: inline-block;
   font-size: 1.6rem; }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__radio-group {
       width: 100%;
       margin-bottom: 1rem; } }
@@ -623,17 +627,17 @@ body {
   display: table;
   transition-property: all;
   transition-duration: 500ms; }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .popup {
       max-width: 90%; } }
   .popup__figure {
     width: 34%;
     display: table-cell;
     vertical-align: middle; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__figure {
         width: 40%; } }
-    @media screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__figure {
         display: none; } }
   .popup__img {
@@ -645,10 +649,10 @@ body {
     padding: 2rem 5rem;
     display: table-cell;
     vertical-align: middle; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__content {
         width: 60%; } }
-    @media screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__content {
         width: 100%; } }
   .popup__text {
@@ -657,7 +661,7 @@ body {
     column-rule: 1px solid #eee;
     -webkit-hyphens: auto;
     hyphens: auto; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__text {
         column-count: 1; } }
   .popup__close {
@@ -684,7 +688,7 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   z-index: 1; }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       transform: skewX(0);
       width: 100%;
@@ -707,12 +711,12 @@ body {
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         border-radius: initial; } }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .story__avatar {
         transform: translateX(-4rem) skewX(0); } }
   .story__text {
     transform: skewX(12deg); }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .story__text {
         transform: skewX(0); } }
   .story__img {
@@ -755,7 +759,7 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
@@ -781,14 +785,14 @@ body {
     width: 80%;
     padding-top: .7rem;
     float: right; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
         float: none; } }
     .footer__copyright:not(:last-child) {
       border-top: 1px solid #777;
       padding-top: 2rem; }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .footer__copyright:not(:last-child) {
           margin-top: 2rem; } }
   .footer__strong {
@@ -800,14 +804,14 @@ body {
   margin-right: auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
   .row::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
       padding: 0 3rem; } }
@@ -815,25 +819,25 @@ body {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^='col-']:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^='col-'] {
         width: 100% !important; } }
   .row .col-1-of-2 {
-    width: calc((1 * calc((100% - 1 * 6rem) / 2)) + (calc(1 - 1) * 6rem)); }
+    width: calc( (1 * calc((100% - 1 * 6rem) / 2)) + (calc(1 - 1) * 6rem)); }
   .row .col-1-of-3 {
-    width: calc((1 * calc((100% - 2 * 6rem) / 3)) + (calc(1 - 1) * 6rem)); }
+    width: calc( (1 * calc((100% - 2 * 6rem) / 3)) + (calc(1 - 1) * 6rem)); }
   .row .col-2-of-3 {
-    width: calc((2 * calc((100% - 2 * 6rem) / 3)) + (calc(2 - 1) * 6rem)); }
+    width: calc( (2 * calc((100% - 2 * 6rem) / 3)) + (calc(2 - 1) * 6rem)); }
   .row .col-1-of-4 {
-    width: calc((1 * calc((100% - 3 * 6rem) / 4)) + (calc(1 - 1) * 6rem)); }
+    width: calc( (1 * calc((100% - 3 * 6rem) / 4)) + (calc(1 - 1) * 6rem)); }
   .row .col-2-of-4 {
-    width: calc((2 * calc((100% - 3 * 6rem) / 4)) + (calc(2 - 1) * 6rem)); }
+    width: calc( (2 * calc((100% - 3 * 6rem) / 4)) + (calc(2 - 1) * 6rem)); }
   .row .col-3-of-4 {
-    width: calc((3 * calc((100% - 3 * 6rem) / 4)) + (calc(3 - 1) * 6rem)); }
+    width: calc( (3 * calc((100% - 3 * 6rem) / 4)) + (calc(3 - 1) * 6rem)); }
 
 /* Above the Fold */
 .header {
@@ -843,7 +847,7 @@ body {
   background-size: cover;
   background-position: top 0 center;
   position: relative; }
-  @media screen and (min-resolution: 192dpi) and (min-width: 37.5em), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), screen and (min-width: 112.5em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 112.5em) {
     .header {
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg"); } }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
@@ -854,15 +858,15 @@ body {
       /* For inspiration and to explore possibilities,
           check Clippy — CSS clip-path maker
           at https://bennettfeely.com/clippy/ */ }
-      @media screen and (max-width: 75em) {
+      @media only screen and (max-width: 75em) {
         .header {
           -webkit-clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 73vh, 0 100%); } }
-      @media screen and (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .header {
           -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); } }
-      @media screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 37.5em) {
         .header {
           -webkit-clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 78vh, 0 100%); } } }
@@ -899,7 +903,7 @@ body {
     text-align: center;
     cursor: pointer;
     box-shadow: 0 1.5rem 4rem 0 rgba(27, 26, 26, 0.15); }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .navigation__button {
         top: 3rem;
         right: 3rem; } }
@@ -915,7 +919,7 @@ body {
     transition-property: transform;
     transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1); }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .navigation__background {
         top: 3.5rem;
         right: 3.5rem; } }
@@ -950,7 +954,7 @@ body {
     transition-property: all;
     transition-duration: 300ms;
     display: inline-block; }
-    @media screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .navigation__link {
         font-size: 6vw; } }
     .navigation__link span {
@@ -1006,13 +1010,13 @@ body {
   background-color: #f7f7f7;
   padding: 30rem 0 30rem;
   margin-top: -25vh; }
-  @media screen and (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-about {
       padding-top: 30rem; } }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
       margin-top: -18vh; } }
-  @media screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .section-about {
       margin-top: -25vh; } }
 
@@ -1022,12 +1026,12 @@ body {
   padding: 20rem 0;
   transform: skewY(-5deg);
   margin-top: -15rem; }
-  @media screen and (min-resolution: 192dpi), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 112.5em) {
+  @media only screen and (min-resolution: 192dpi), only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 112.5em) {
     .section-features {
       background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/nat-4.jpg"); } }
   .section-features > * {
     transform: skewY(5deg); }
-  @media screen and (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-features {
       transform: skewY(-7deg); }
       .section-features > * {
@@ -1041,10 +1045,10 @@ body {
 .section-stories {
   padding: 15rem 0;
   position: relative; }
-  @media screen and (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-stories {
       padding: 10rem 0; } }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 8rem 0; } }
 
@@ -1060,20 +1064,20 @@ body {
   background-position: 0 50%;
   margin-left: 2rem;
   margin-right: 2rem; }
-  @media screen and (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 60%, transparent 60%), url("../img/nat-10-medium.jpg");
       background-size: cover; } }
-  @media screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .book {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8) 0, rgba(255, 255, 255, 0.8) 100%), url("../img/nat-10-medium.jpg");
       background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
-    @media screen and (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .book__form {
         width: 60%; } }
-    @media screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
