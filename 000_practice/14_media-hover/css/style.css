@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+}
+
+.box {
+  font-size: 5rem;
+  border: 2px solid hotpink;
+  padding: 2rem 5rem;
+}
+
+@media only screen and (any-hover: none) {
+  .box {
+    background-color: darkorange;
+  }
+}
