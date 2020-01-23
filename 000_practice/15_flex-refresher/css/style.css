@@ -1,0 +1,125 @@
+/* RESETS */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 3rem;
+  color: #202022;
+}
+
+/* FLEX CONTAINERS */
+
+.flex-container:nth-child(odd) {
+  background-color: #202022;
+}
+
+.flex-container:nth-child(even) {
+  background-color: #f2f3f5;
+}
+
+.flex-container {
+  padding: 2rem;
+  height: 25vh;
+
+  /* Flexbox */
+  display: flex;
+}
+
+.c1 {
+  justify-content: flex-start; /* default value */
+  align-items: stretch; /* default value */
+  flex-direction: row-reverse;
+}
+
+.c2 {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.c3 {
+  justify-content: center;
+  align-items: baseline;
+}
+
+.c4 {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c5 {
+  justify-content: space-around;
+  /* align-items: flex-end; */
+}
+
+.c6 {
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+/* FLEX ITEMS */
+
+.flex-item {
+  background-color: #e87f02;
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+}
+
+.i3 {
+  font-size: 10rem;
+}
+
+.i4 {
+  font-size: 6rem;
+}
+
+.c1 .i2 {
+  align-self: flex-end;
+}
+
+.c2 .i2 {
+  align-self: center;
+}
+
+.c3 .i2 {
+  align-self: stretch;
+}
+
+.c4 .i1 {
+  order: 2;
+}
+
+.c4 .i2 {
+  order: 4;
+}
+
+.c4 .i3 {
+  order: 0; /* default value */
+}
+
+.c4 .i4 {
+  order: 3;
+}
+
+.c4 .i5 {
+  order: 1;
+}
+
+.c5 .i2 {
+  flex-grow: 1;
+}
+
+.c5 .i5 {
+  flex-basis: 20vw;
+}
