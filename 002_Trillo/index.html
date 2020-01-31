@@ -11,23 +11,41 @@
 </head>
 
 <body>
-
   <!-- This is a comment -->
   <div class="container">
-
     <header class="header">
-      <div class="header__logo-box">Logo</div>
-      <div class="search-bar">Search bar</div>
-      <div class="user">
-        <div class="user__bookmark">bookmark</div>
-        <div class="user__messages">messages</div>
-        <div class="user__avatar">avatar</div>
-        <div class="user__name">name</div>
-      </div>
+      <img src="img/logo.png" alt="Trillo logo" class="header__logo" />
+
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search hotels" />
+        <button class="search__button">
+          <svg class="search__icon">
+            <use xlink:href="svg/sprite.svg#icon-magnifying-glass"></use>
+          </svg>
+        </button>
+      </form>
+
+      <nav class="user-nav">
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="svg/sprite.svg#icon-bookmark"></use>
+            <span class="user-nav__notification">7</span>
+          </svg>
+        </div>
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon">
+            <use xlink:href="svg/sprite.svg#icon-chat"></use>
+            <span class="user-nav__notification">13</span>
+          </svg>
+        </div>
+        <div class="user-nav__icon-box">
+          <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo" />
+          <span class="user-nav__user-name">Mauricio</span>
+        </div>
+      </nav>
     </header>
 
     <div class="content">
-
       <nav class="sidebar">
         <ul class="sidebar__menu">
           <li class="sidebar__menu-item">Hotel</li>
@@ -43,10 +61,8 @@
         <article class="hotel-info">Hotel information</article>
         <aside class="testimonial">testimonial</aside>
       </main>
-
     </div>
   </div>
-
 </body>
 
 </html>
