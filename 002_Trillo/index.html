@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>trillo</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <title>trillo</title>
-</head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img src="img/logo.png" alt="Trillo logo" class="header__logo" />
 
-<body>
-  <!-- This is a comment -->
-  <div class="container">
-    <header class="header">
-      <img src="img/logo.png" alt="Trillo logo" class="header__logo" />
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="svg/sprite.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
 
-      <form action="#" class="search">
-        <input type="text" class="search__input" placeholder="Search hotels" />
-        <button class="search__button">
-          <svg class="search__icon">
-            <use xlink:href="svg/sprite.svg#icon-magnifying-glass"></use>
-          </svg>
-        </button>
-      </form>
+        <nav class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="svg/sprite.svg#icon-bookmark"></use>
+              <span class="user-nav__notification">7</span>
+            </svg>
+          </div>
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="svg/sprite.svg#icon-chat"></use>
+              <span class="user-nav__notification">13</span>
+            </svg>
+          </div>
+          <div class="user-nav__user">
+            <img
+              src="img/user.jpg"
+              alt="User photo"
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__user-name">Mauricio</span>
+          </div>
+        </nav>
+      </header>
 
-      <nav class="user-nav">
-        <div class="user-nav__icon-box">
-          <svg class="user-nav__icon">
-            <use xlink:href="svg/sprite.svg#icon-bookmark"></use>
-            <span class="user-nav__notification">7</span>
-          </svg>
-        </div>
-        <div class="user-nav__icon-box">
-          <svg class="user-nav__icon">
-            <use xlink:href="svg/sprite.svg#icon-chat"></use>
-            <span class="user-nav__notification">13</span>
-          </svg>
-        </div>
-        <div class="user-nav__icon-box">
-          <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo" />
-          <span class="user-nav__user-name">Mauricio</span>
-        </div>
-      </nav>
-    </header>
+      <div class="content">
+        <nav class="sidebar">
+          <ul class="sidebar__menu">
+            <li class="sidebar__menu-item">Hotel</li>
+            <li class="sidebar__menu-item">Flight</li>
+            <li class="sidebar__menu-item">Car rental</li>
+            <li class="sidebar__menu-item">Tours</li>
+          </ul>
+        </nav>
 
-    <div class="content">
-      <nav class="sidebar">
-        <ul class="sidebar__menu">
-          <li class="sidebar__menu-item">Hotel</li>
-          <li class="sidebar__menu-item">Flight</li>
-          <li class="sidebar__menu-item">Car rental</li>
-          <li class="sidebar__menu-item">Tours</li>
-        </ul>
-      </nav>
-
-      <main class="hotel-view">
-        <section class="photos">photos</section>
-        <header class="hotel-header">Hotel Las Palmas</header>
-        <article class="hotel-info">Hotel information</article>
-        <aside class="testimonial">testimonial</aside>
-      </main>
+        <main class="hotel-view">
+          <section class="photos">photos</section>
+          <header class="hotel-header">Hotel Las Palmas</header>
+          <article class="hotel-info">Hotel information</article>
+          <aside class="testimonial">testimonial</aside>
+        </main>
+      </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
