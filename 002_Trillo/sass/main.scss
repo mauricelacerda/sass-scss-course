@@ -1,9 +1,17 @@
-@import 'abstracts/variables';
+@import "abstracts/variables";
 
-@import 'base/base';
+@import "base/base";
 
-@import 'components/logo';
-@import 'components/search';
-@import 'components/usr-navigation';
+@import "components/gallery";
+@import "components/btn-inline";
+@import "components/legal";
+@import "components/list";
+@import "components/logo";
+@import "components/overview";
+@import "components/paragraph";
+@import "components/recommend";
+@import "components/search";
+@import "components/side-navigation";
+@import "components/usr-navigation";
 
-@import 'layout/layout';
+@import "layout/layout";
