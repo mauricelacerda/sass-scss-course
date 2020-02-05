@@ -19,4 +19,9 @@
   // SHADOWS
 
   --shadow-dark: 0 2rem 6rem #0000004d;
+  --shadow-light: 0 2rem 5rem #0000000f;
+
+  // LINES
+
+  --line: 1px solid var(--color-grey-light-2);
 }
