@@ -36,6 +36,7 @@
 }
 
 .details {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
@@ -43,7 +44,6 @@
 }
 
 .description {
-  font-size: 1.4rem;
   box-shadow: var(--shadow-light);
   padding: 3rem;
   flex: 0 1 60%;
@@ -51,6 +51,21 @@
 }
 
 .user-reviews {
-  background-color: yellowgreen;
   flex: 1 1 0;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+  }
 }
